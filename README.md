@@ -134,14 +134,14 @@ Cluster Characteristics:
     * Extreme capital gains/losses
 
 Deployment
-Interactive Dashboard:https://img.shields.io/badge/Heroku-Deployed-blueviolet
+Interactive Dashboard:
 Deployment Steps:
-1. Set up Heroku CLI
-2. Create new app
-3. Push via Git:
+1. Create a new Space on Hugging Face with Gradio SDK.
+2. Push your project repo to the Space’s Git remote:
 bash
-
-git push heroku main
+git remote add space https://huggingface.co/spaces/Peterobi/uci_adult_clustering
+git push space main
+3. Hugging Face will auto-build and deploy your app.
 
 Contributions
 Contributions welcome! Please:
