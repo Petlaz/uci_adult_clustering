@@ -1,0 +1,35 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "uci_adult_clustering"
+version = "0.0.1"
+description = "This project explores unsupervised machine learning techniques on the UCI Adult Census Income dataset, aiming to discover hidden demographic and economic clusters within the U.S. adult population. The dataset contains mixed categorical and numerical features with missing values and outliers, making it a realistic challenge for data preprocessing and modeling."
+authors = [
+  { name = "Peter Ugonna Obi" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.11.0"
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
+[tool.isort]
+profile = "black"
+known_first_party = ["uci_adult_clustering"]
+force_sort_within_sections = true
+
+
